@@ -46,7 +46,7 @@ For facial verification, replace src/test.jpg with an image of yours keeping the
 ## Acknowledgements
 
 * Priyanka Dani (priyanka.dani1497@gmail.com)
-* Amogh Kuruwatti (mailto:amoghsgk@gmail.com)
+* Amogh Kuruwatti (amoghsgk@gmail.com)
 * Fabian Grote (grote.fabian@outlook.com)
 * Shoumik Dey (shoumikdey2018@gmail.com)
 
