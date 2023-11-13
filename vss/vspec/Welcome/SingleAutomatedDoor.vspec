@@ -1,0 +1,19 @@
+#
+# Definition of an automated door
+#
+
+Action:
+  datatype: string
+  type: actuator
+  description: Start lifting action for window; possible actions are "open", "close", "stop"
+
+Sensor:
+  type: branch
+  description: Sensor data from automated door.
+
+Sensor.Angle:
+  datatype: uint8
+  type: sensor
+  min: 0
+  max: 90
+  description: Opening angle of automated door. Ranges between 0 ... +90.

@@ -1,0 +1,88 @@
+#
+
+#
+# Root Vehicle Signal Specification file
+#
+#
+# The vehicle branch for highlevel vehicle signals and attributes.
+#
+Vehicle:
+  type: branch
+  description: High-level vehicle data.
+
+
+# ----------------------------------------
+# Part: Windows
+# -----
+Vehicle.Window:
+  type: branch
+  instances:
+    - Row[1,2]
+    - ["DriverSide"]
+  description: All seats.
+
+#include Welcome/SingleWindow.vspec Vehicle.Window
+
+
+# ----------------------------------------
+# Part: Automated Doors
+# -----
+Vehicle.Door:
+  type: branch
+  instances:
+    - Row[1,2]
+    - ["DriverSide"]
+  description: All automated doors.
+
+#include Welcome/SingleAutomatedDoor.vspec Vehicle.Door
+
+
+# ----------------------------------------
+# Part: Trunk
+# -----
+Vehicle.Trunk:
+  type: branch
+  description: Trunk of vehicle.
+
+Vehicle.Trunk.Action:
+  datatype: string
+  type: actuator
+  description: Start action for trunk; possible actions are "open", "close"
+
+
+# ----------------------------------------
+# Part: Environment data
+# -----
+Vehicle.Exterieur:
+  type: branch
+  description: Environmental data.
+
+Vehicle.Exterieur.AirTemperature:
+  datatype: int8
+  type: sensor
+  min: -100
+  max: 100
+  unit: celsius
+  description: Actual temperature. Ranges between -100 ... +100.
+
+Vehicle.Exterieur.Brightness:
+  datatype: uint8
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Actual brightness. Ranges from 0 = dark to 100 = max brightness.
+
+Vehicle.Exterieur.Humidity:
+  datatype: uint8
+  type: sensor
+  min: 0
+  max: 100
+  unit: percent
+  description: Actual humidity in the air. Ranges from 0 = dry to 100 = max humidity.
+
+Vehicle.Exterieur.CameraScenario:
+  datatype: string
+  type: sensor
+  description: String showing what the camera has detected.
+

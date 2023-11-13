@@ -1,0 +1,17 @@
+#
+# Definition of a Window
+#
+
+Action:
+  datatype: string
+  type: actuator
+  description: Start lifting action for window; possible actions are "open", "close", "stop"
+
+Sensor:
+  type: branch
+  description: Sensor data from window.
+
+Sensor.Position:
+  datatype: float
+  type: sensor
+  description: Window position. 0 = Fully closed 100 = Fully opened.
