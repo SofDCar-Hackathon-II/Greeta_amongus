@@ -41,10 +41,12 @@ Run the app using the following command:
 ```bash
 python src/app.py
 ```
+For facial verification, replace src/test.jpg with an image of yours keeping the filename 'test.jpg'
+
 ## Acknowledgements
 
 * Priyanka Dani (priyanka.dani1497@gmail.com)
-* Amogh Kuruwatti ()
+* Amogh Kuruwatti (mailto:amoghsgk@gmail.com)
 * Fabian Grote (grote.fabian@outlook.com)
 * Shoumik Dey (shoumikdey2018@gmail.com)
 
